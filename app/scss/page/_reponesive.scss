@@ -83,4 +83,29 @@
 	.box-content-center {
 		width: 100%;
 	}
+
+	.row-list {
+		row-gap: 24px;
+	}
+	.post{
+		&-small{
+			.post-thumbnail{
+				width: 100%;
+				aspect-ratio: 176/130;
+				margin-bottom: 10px;
+			}
+		}
+		&-title{
+			font-size: 15px;
+			line-height: 1.4;
+		}
+		&-big{
+			.post-title{
+				font-size: 16px;
+			}
+			.post-content{
+				padding: 20px;
+			}
+		}
+	}
 }

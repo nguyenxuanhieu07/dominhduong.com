@@ -734,7 +734,7 @@ a:hover {
   width: 46px;
   height: 36px;
   right: 20px;
-  top: 50%;
+  top: 20px;
   transform: translateX(-50%);
   background: url(/images/entry_qoute.svg) no-repeat;
   background-size: cover;
@@ -818,6 +818,117 @@ a:hover {
   font-size: 14px;
 }
 
+.post {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px 0px #3C25171A;
+  padding: 10px;
+  height: 100%;
+}
+
+.post-thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 534/300;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.post-thumbnail img {
+  transition: all .3s;
+  object-fit: cover;
+  object-position: 50% 50%;
+  -o-object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.post-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.post-title a {
+  color: #3C2517;
+}
+
+.post-title a:hover {
+  color: #D7A444;
+}
+
+.post-time {
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.post-big .post-thumbnail {
+  position: relative;
+}
+
+.post-big .post-thumbnail::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, rgba(214, 164, 67, 0) 0%, #CD9831 85.58%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+}
+
+.post-big .post-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+}
+
+.post-big .post-title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.post-big .post-title a {
+  color: #fff;
+}
+
+.post-big .post-time {
+  color: #fff;
+}
+
+.post-small .post-thumbnail {
+  width: 100%;
+  aspect-ratio: 242/180;
+  margin-bottom: 12px;
+}
+
+.post-small .post-time {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.post-small .post-time svg {
+  color: #D7A444;
+}
+
+.row-list {
+  row-gap: 30px;
+}
+
+.list-post-solution {
+  padding: 100px 0;
+}
+
+.list-post-related {
+  padding-bottom: 100px;
+}
+
 @media (max-width: 767px) {
   .sc-connect {
     padding-top: 25px;
@@ -884,6 +995,24 @@ a:hover {
   }
   .box-content-center {
     width: 100%;
+  }
+  .row-list {
+    row-gap: 24px;
+  }
+  .post-small .post-thumbnail {
+    width: 100%;
+    aspect-ratio: 176/130;
+    margin-bottom: 10px;
+  }
+  .post-title {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .post-big .post-title {
+    font-size: 16px;
+  }
+  .post-big .post-content {
+    padding: 20px;
   }
 }
 
